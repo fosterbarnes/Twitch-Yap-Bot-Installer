@@ -1,0 +1,1 @@
+"C:\Users\%USERNAME%\AppData\Local\Programs\Python\Python312\Scripts\pip.exe" install -r "%ProgramFiles(x86)%\Yap Bot\TwitchMarkovChain-2.4\requirements.txt" && pause
