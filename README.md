@@ -105,7 +105,7 @@ desktop
 Last step I PROMISE
 1. Run 'Twitch Yap Bot' from your desktop shortcut then 'Press any key to continue... when prompted. This sets up a few files in the backend.
 2. Run 'Twitch Yap Bot' one more time, this time it should be up and running!
-All done! Use 'lyap' (or any other command you defined earlier) in your chat to test it out
+All done! Use '!yap' (or any other command you defined earlier) in your chat to test it out
 Clicking OK on this window will show an image of what yap bot should look like if it's running properly.
 
 ![7](https://github.com/user-attachments/assets/81ec5c82-1ef5-47e9-9ea9-c5ce73771e98)
