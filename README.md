@@ -63,6 +63,8 @@ Set-ExecutionPolicy Unrestricted
 This is because the setup helper scripts in this installer
 require admin priveleges to function properly
 
+---
+
 The next window will be a Python installer.If you don't follow
 the next three steps Yap Bot will not work.
 1. On the 'Install Python 3.12.1' page click 'Use admin
@@ -70,6 +72,8 @@ priveleges when installing py.exe'
 2. Click 'Add python.exe to PATH'
 3. Click 'Install Now' and finish installing
 Click 'OK' to start installing python
+
+---
 
 1. Click OK to generate a OAuth Password for your Twitch bot
 account. Make sure to login with your bot's Twitch account
@@ -79,9 +83,13 @@ account.
 3. Close the browser window and paste the OAuth password
 into the next window that pops up.
 
+---
+
 In the next window, you'll be prompted to enter more info
 about your Twitch bot account as well as configure some
 options for the Yap Bot. Denied users are users that Yap Bot will not read or store chat messages from.
+
+---
 
 If you don't do these next steps, Twitch Yap Bot won't work.
 1. Right click the new 'Twitch Yap Bot' shortcut on your
@@ -91,6 +99,8 @@ desktop
 4. Click 'Advanced'
 5. Click 'Run as administrator'
 6. Click 'OK'
+
+---
 
 Last step I PROMISE
 1. Run 'Twitch Yap Bot' from your desktop shortcut then 'Press any key to continue... when prompted. This sets up a few files in the backend.
