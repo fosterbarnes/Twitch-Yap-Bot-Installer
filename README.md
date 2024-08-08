@@ -59,7 +59,9 @@ Before the install starts:
 1. Open powershell as administrator (search windows for
 powershell, right click > run as administrator)
 2. Type the following command then press enter:
+```
 Set-ExecutionPolicy Unrestricted
+```
 This is because the setup helper scripts in this installer
 require admin priveleges to function properly
 
