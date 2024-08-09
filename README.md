@@ -47,9 +47,13 @@ Part of the guide shows you how to temporarily disable Windows antivirus and UAC
 
 
 
-8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.0/Yap.Bot.Installer.v2.exe) and run it, follow the on screen instructions that pop up when running through the installer
+8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.1/Yap.Bot.Installer.v2.1.exe) and run it, follow the on screen instructions that pop up when running through the installer
 
    You'll probably have to click "more info" then "run anyway" when you run the installer.
+   
+   Once it's installed, launch Yap Bot from the desktop shortcut or start menu before streaming. It will quit automatically when OBS or Streamlabs OBS is closed.
+
+   To uninstall, download and run [this](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.1/Uninstall.Yap.Bot.exe)
 
 ---
 
@@ -73,7 +77,6 @@ the next three steps Yap Bot will not work.
 priveleges when installing py.exe'
 2. Click 'Add python.exe to PATH'
 3. Click 'Install Now' and finish installing
-Click 'OK' to start installing python
 
 ---
 
