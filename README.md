@@ -47,7 +47,7 @@ Part of the guide shows you how to temporarily disable Windows antivirus and UAC
 
 
 
-8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.1/Yap.Bot.Installer.v2.1.exe) and run it, follow the on screen instructions that pop up when running through the installer. These instructions are also included below.
+8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.2/YapBotInstaller.v2.2.exe) and run it, follow the on screen instructions that pop up when running through the installer. These instructions are also included below.
 
    You'll probably have to click "more info" then "run anyway" when you run the installer.
    
