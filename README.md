@@ -37,7 +37,6 @@ Follow the on screen instructions to install.
 To uninstall, copy and paste the following then press enter
    
 `iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotUninstaller.ps1")`
-To uninstall, download and run [this](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.1/Uninstall.Yap.Bot.exe)
 
 ---
 
