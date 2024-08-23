@@ -2,7 +2,7 @@
 
 Beginner friendly windows installer for [TwitchMarkovChain](https://github.com/tomaarsen/TwitchMarkovChain)
 
-I made this installer using InstallForge, and have included several powershell scripts to help automate the setup process. I am by no means an expert programmer, so all of these scripts require admin priveleges. For this reason, the installer and files included may be a false positive for Windows antivirus. All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/main/Installer%20Files) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
+All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/main/Installer%20Files) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
 
 Part of the guide shows you how to temporarily disable Windows antivirus and UAC. PLEASE turn these back on after you're done and don't run any of these files if you feel uncomfortable doing this.
 
@@ -26,26 +26,6 @@ Part of the guide shows you how to temporarily disable Windows antivirus and UAC
 4. Copy and paste the following into powershell, then press enter: `Set-ExecutionPolicy Unrestricted`  . After pressing enter, press 'A' and press enter again
 
 ![3](https://github.com/user-attachments/assets/822e1cae-71ac-4950-b93b-fa145003d918)
-
-
-
-5. Search windows for virus & threat protection, press enter or click "virus & threat detection"
-
-![4](https://github.com/user-attachments/assets/3d35c2b2-f2ad-45b7-8f8c-c87b3bb8e2f8)
-
-
-
-6. Click "manage settings" under virus & threat detection settings
-
-![5](https://github.com/user-attachments/assets/e69fd0f1-6cf0-450c-824f-76c8587e9b9f)
-
-
-
-7. Turn everything off
-
-![6](https://github.com/user-attachments/assets/490f4390-7c3b-4736-b66a-1652412d198b)
-
-
 
 8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.2/YapBotInstaller.v2.2.exe) and run it, follow the on screen instructions that pop up when running through the installer. These instructions are also included below.
 
