@@ -26,7 +26,8 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 
 4. Copy and paste the following into powershell, then press enter: `Set-ExecutionPolicy Unrestricted`  . After pressing enter, press 'A' and press enter again
 
-![3](https://github.com/user-attachments/assets/822e1cae-71ac-4950-b93b-fa145003d918)
+![cmd](https://github.com/user-attachments/assets/d6349e05-a37c-422a-b715-66ffb79a3f54)
+
 
 5. In the same powershell window, copy and paste the following then press enter to start installing Yap Bot:
    
