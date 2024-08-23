@@ -20,7 +20,7 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 
 3. Search windows for powershell, right click "windows powershell" and open as administrator
 
-![2](https://github.com/user-attachments/assets/3aa83167-ccaa-46ff-aa67-d9be9bc9142a)
+![3](https://github.com/user-attachments/assets/f03d8330-b149-4108-844a-328647508c80)
 
 
 
