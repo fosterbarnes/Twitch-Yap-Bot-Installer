@@ -40,58 +40,59 @@ To uninstall, download and run [this](https://github.com/fosterbarnes/Twitch-Yap
 
 ## On Screen Instructions
 
-Before the install starts:
-1. Open powershell as administrator (search windows for
-powershell, right click > run as administrator)
-2. Type the following command then press enter:
-```
-Set-ExecutionPolicy Unrestricted
-```
-This is because the setup helper scripts in this installer
-require admin priveleges to function properly
+-----------------------------STEP 1------------------------------
 
----
+Yap Bot is a Python script. If you don't follow the next three steps
+Yap Bot will not work.
 
-The next window will be a Python installer.If you don't follow
-the next three steps Yap Bot will not work.
-1. On the 'Install Python 3.12.1' page click 'Use admin
-priveleges when installing py.exe'
+1. After starting the Python installer, click 'Use admin priveleges when
+installing py.exe'
 2. Click 'Add python.exe to PATH'
 3. Click 'Install Now' and finish installing
+Press any key to start installing python...
+-----------------------------STEP 2------------------------------                                                       
+Installing python dependencies...
 
----
+Press any key to continue...
 
-1. Click OK to generate a OAuth Password for your Twitch bot
-account. Make sure to login with your bot's Twitch account
-you'd use with something like Mixitup, not your main
-account.
-2. After logging in, copy the password that is generated.
-3. Close the browser window and paste the OAuth password
-into the next window that pops up.
+-----------------------------STEP 3------------------------------
 
----
+1. Login with your bot's Twitch account in your main web browser.
+Login with a bot account you'd use with something like Mixitup, not your main account.
+2. Press any key to continue on this window to generate an OAuth password
+3. Copy the password that is generated.
+4. Close the browser window and paste the OAuth password into the
+next window that pops up.
 
-In the next window, you'll be prompted to enter more info
-about your Twitch bot account as well as configure some
-options for the Yap Bot. Denied users are users that Yap Bot will not read or store chat messages from.
+Press any key to generate OAuth password...
 
----
+-----------------------------STEP 4------------------------------
 
-If you don't do these next steps, Twitch Yap Bot won't work.
-1. Right click the new 'Twitch Yap Bot' shortcut on your
-desktop
+If you don't do these next steps, Twitch Yap Bot may not start correctly.
+1. Right click the new 'Twitch Yap Bot' shortcut on your desktop
 2. Click Properties
 3. Select 'Shortcut' from the menu on top
 4. Click 'Advanced'
 5. Click 'Run as administrator'
 6. Click 'OK'
 
----
+Press any key to continue...
 
-Last step I PROMISE
-1. Run 'Twitch Yap Bot' from your desktop shortcut then 'Press any key to continue... when prompted. This sets up a few files in the backend.
-2. Run 'Twitch Yap Bot' one more time, this time it should be up and running!
-All done! Use '!yap' (or any other command you defined earlier) in your chat to test it out
-Clicking OK on this window will show an image of what yap bot should look like if it's running properly.
+-----------------------------STEP 5------------------------------
+
+We need to run Yap Bot to set some things up. Press any key in this
+window to run Yap Bot, then press any key to continue in the new command prompt
+window that pops up if prompted.
+
+Close the new windows that open when it's done (DON'T ClOSE THIS WINDOW).
+
+Press any key to continue...
+
+-----------------------------STEP 6------------------------------
+
+All done! Launch Yap Bot from the Desktop ot Start Menu, then use
+'!yap' (or any other command you defined earlier) in your chat to test it out.
+Have fun homie. Continuing with the installer will launch Yap
+This is what Yap Bot looks like when it's running properly:
 
 ![7](https://github.com/user-attachments/assets/81ec5c82-1ef5-47e9-9ea9-c5ce73771e98)
