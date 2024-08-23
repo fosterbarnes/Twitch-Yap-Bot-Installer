@@ -29,7 +29,7 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 ![3](https://github.com/user-attachments/assets/822e1cae-71ac-4950-b93b-fa145003d918)
 
 5. In the same powershell window, copy and paste the following then press enter to start installing Yap Bot:
-`Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/main/YapBotInstallerv3.0.ps1" | Select-Object -ExpandProperty Content)`
+`iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotInstaller.ps1")`
 
 8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.2/YapBotInstaller.v2.2.exe) and run it, follow the on screen instructions that pop up when running through the installer. These instructions are also included below.
 
