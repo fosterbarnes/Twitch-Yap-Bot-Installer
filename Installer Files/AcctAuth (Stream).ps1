@@ -192,3 +192,5 @@ $content2[4] = $content2[4] -replace 'Cooldown', '"Cooldown"'
 
 # Write the modified content back to the file
 $content2 | Set-Content $filePath2
+
+Pause
