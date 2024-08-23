@@ -40,9 +40,9 @@ $form.Controls.Add($button)
 # Show the form as a dialog box and get the result
 $result = $form.ShowDialog()
 
-# If the user clicks OK, save the entered password to the file
+# If the user clicks OK, save the entered password or default value to the file
 if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
-    $Password = $textbox.Text
+    $Password = if ($textbox.Text -eq "") { "oauth:000000000000000000000000000000" } else { $textbox.Text }
     $Password | Out-File -FilePath $filePath -Force
 }
 
@@ -86,23 +86,20 @@ function PromptAndSave($prompt, $infoText, $defaultText = "") {
     # Show the form as a dialog box and get the result
     $result = $form.ShowDialog()
 
-    # If the user clicks OK, save the entered information to the file
+    # If the user clicks OK, save the entered information or default value to the file
     if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
-        $inputText = $textBox.Text
+        $inputText = if ($textBox.Text -eq "") { $defaultText } else { $textBox.Text }
         if ($infoText -eq "DeniedUsers:") {
-            # For DeniedUsers, format the input as an array
             $inputTextArray = $inputText -split ','
             $inputTextArray = $inputTextArray.Trim() | ForEach-Object { "`"$_`"" }
             $inputTextFormatted = $inputTextArray -join ", "
             $infoText = "`"$infoText`": [$inputTextFormatted]"
         } elseif ($infoText -eq "GenerateCommands:") {
-            # For GenerateCommands, format the input as an array
             $inputTextArray = $inputText -split ','
             $inputTextArray = $inputTextArray.Trim() | ForEach-Object { "`"$_`"" }
             $inputTextFormatted = $inputTextArray -join ", "
             $infoText = "`"$infoText`": [$inputTextFormatted]"
         } else {
-            # For other inputs, format as key-value pair
             $infoText = "`"$infoText`": `"$inputText`""           
         }
         $infoText | Out-File -FilePath $filePath -Append
@@ -112,27 +109,27 @@ function PromptAndSave($prompt, $infoText, $defaultText = "") {
     $form.Dispose()
 }
 
-# Prompt for Main Channel Name
-PromptAndSave "Main Channel Name (The account you stream on):" "Channel:"
+# Prompt for Main Channel Name with default value
+PromptAndSave "Main Channel Name (The account you stream on):" "Channel:" "Channel"
 
-# Prompt for Bot Channel Name
-PromptAndSave "Bot Channel Name (the account for your bot):" "Nickname:"
+# Prompt for Bot Channel Name with default value
+PromptAndSave "Bot Channel Name (the account for your bot):" "Nickname:" "Nickname"
 
-# Append denied users
+# Append default denied users
 $deniedUsers = '"DeniedUsers": ["StreamElements", "Nightbot", "Moobot", "Marbiebot", "LumiaStream"]'
 $deniedUsers | Out-File -FilePath $filePath -Append
 
-# Prompt for additional Denied Users
+# Prompt for additional Denied Users with default value
 PromptAndSave "Denied Users (comma-separated):" "DeniedUsers:" "StreamElements, Nightbot, Moobot, Marbiebot, LumiaStream"
 
-# Prompt for Cooldown
-PromptAndSave "Cooldown (Seconds):" "Cooldown:"
+# Prompt for Cooldown with default value
+PromptAndSave "Cooldown (Seconds):" "Cooldown:" "0"
 
-# Append generate commands
+# Append default generate commands
 $generateCommands = '"GenerateCommands": ["!generate", "!g", "!yap"]'
 $generateCommands | Out-File -FilePath $filePath -Append
 
-# Prompt for additional Generate Commands
+# Prompt for additional Generate Commands with default value
 PromptAndSave "Generate Command (comma-separated):" "GenerateCommands:" "!generate, !g, !yap"
 
 # Remove lines 4 & 7 from tempinfo.txt
@@ -175,18 +172,17 @@ $content | Out-File -FilePath $filePath -Force
 $filePath2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\tempinfo.txt"
 
 # Read the content of the file
-$content2 = Get-Content $filePath
+$content2 = Get-Content $filePath2
 
 # Check if line 2 contains the pattern to replace
 if ($content2[1] -match '"Channel": "') {
     # Replace the pattern with the desired string
-    $content2[1] = $content2[1] -replace '"Channel": "', '"Channel": "#'
+    $content2[1] = $content2[1] -replace '"Channel": "', '"Channel": "'
 }
 
-# Remove all quotes from line 5
-$content2[4] = $content2[4] -replace '"', ''
-# Replace 'Cooldown' with '"Cooldown"' in line 5
-$content2[4] = $content2[4] -replace 'Cooldown', '"Cooldown"'
+# Write the updated content back to the file
+$content2 | Out-File -FilePath $filePath2 -Force
 
-# Write the modified content back to the file
-$content2 | Set-Content $filePath2
+# Final cleanup
+# Remove any empty lines
+(Get-Content -Path $filePath2 | Where-Object { $_ -match '\S' }) | Out-File -FilePath $filePath2 -Force
