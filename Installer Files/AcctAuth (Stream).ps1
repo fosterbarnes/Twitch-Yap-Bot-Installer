@@ -224,8 +224,6 @@ $settingsContent = $settingsContent -replace '(?<="GenerateCommands": )\[.*?\]',
 # Write modified content back to Settings.py
 $settingsContent | Set-Content -Path $yapSettings
 
-Write-Host "Settings.py has been updated."
-
 $yapSettings2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-2.4\Settings.py"
 
 # Read the content of the file
