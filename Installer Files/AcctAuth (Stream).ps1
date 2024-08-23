@@ -170,8 +170,6 @@ $content[3] += ','
 $content[4] += ','
 $content | Out-File -FilePath $filePath -Force
 
-Pause
-
 # Clean up tempinfo.txt
 # Define paths
 $filePath2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\tempinfo.txt"
