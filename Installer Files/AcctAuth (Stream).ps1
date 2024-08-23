@@ -7,10 +7,12 @@ $filePath = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\tempinfo.txt"
 New-Item -Path $filePath -ItemType "file" -Force -ErrorAction SilentlyContinue | Out-Null
 
 # Prompt user to click OK then open OAuth link
-Write-Host  "1. Login with your bot's Twitch account in your main web browser. Login with a bot account you'd use with something like Mixitup, not your main account.
+Write-Host  "1. Login with your bot's Twitch account in your main web browser.
+Login with a bot account you'd use with something like Mixitup, not your main account.
 2. Press any key to continue on this window to generate an OAuth password 
 3. Copy the password that is generated.
-4. Close the browser window and paste the OAuth password into the next window that pops up."
+4. Close the browser window and paste the OAuth password into the
+next window that pops up."
 
 [System.Console]::ForegroundColor = [System.ConsoleColor]::Yellow
 Write-Host "`nPress any key to generate OAuth password..."
