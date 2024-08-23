@@ -169,4 +169,26 @@ $content[2] += ','
 $content[3] += ','
 $content[4] += ','
 $content | Out-File -FilePath $filePath -Force
-exit
+
+Pause
+
+# Clean up tempinfo.txt
+# Define paths
+$filePath2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\tempinfo.txt"
+
+# Read the content of the file
+$content2 = Get-Content $filePath
+
+# Check if line 2 contains the pattern to replace
+if ($content2[1] -match '"Channel": "') {
+    # Replace the pattern with the desired string
+    $content2[1] = $content2[1] -replace '"Channel": "', '"Channel": "#'
+}
+
+# Remove all quotes from line 5
+$content2[4] = $content2[4] -replace '"', ''
+# Replace 'Cooldown' with '"Cooldown"' in line 5
+$content2[4] = $content2[4] -replace 'Cooldown', '"Cooldown"'
+
+# Write the modified content back to the file
+$content2 | Set-Content $filePath2
