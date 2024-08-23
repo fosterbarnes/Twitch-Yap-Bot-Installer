@@ -32,13 +32,9 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
    
 `iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotInstaller.ps1")`
 
-8. Download [Yap Bot Installer](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.2/YapBotInstaller.v2.2.exe) and run it, follow the on screen instructions that pop up when running through the installer. These instructions are also included below.
+Follow the on screen instructions, which are also included below.
 
-   You'll probably have to click "more info" then "run anyway" when you run the installer.
-   
-   Once it's installed, launch Yap Bot from the desktop shortcut or start menu before streaming. It will quit automatically when OBS or Streamlabs OBS is closed.
-
-   To uninstall, download and run [this](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.1/Uninstall.Yap.Bot.exe)
+To uninstall, download and run [this](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/releases/download/v2.1/Uninstall.Yap.Bot.exe)
 
 ---
 
