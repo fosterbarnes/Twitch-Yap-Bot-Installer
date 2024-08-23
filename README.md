@@ -13,7 +13,8 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 1. Search Windows for UAC and press "Enter". Then set it to "Never Notify" in the window that pops up
 
 ![1](https://github.com/user-attachments/assets/f3de43b1-c936-4eed-b650-d750d470bb81)
-![11](https://github.com/user-attachments/assets/06067543-e2e2-4af4-b8b2-b478aa6cf26d)
+![2](https://github.com/user-attachments/assets/55d641f1-86bb-4c31-882c-3b04c398c4cb)
+
 
 
 
