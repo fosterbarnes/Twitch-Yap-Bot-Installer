@@ -110,10 +110,10 @@ function PromptAndSave($prompt, $infoText, $defaultText = "") {
 }
 
 # Prompt for Main Channel Name with default value
-PromptAndSave "Main Channel Name (The account you stream on):" "Channel:" "Channel"
+PromptAndSave "Main Channel Name (The account you stream on):" "Channel:" "ChannelName"
 
 # Prompt for Bot Channel Name with default value
-PromptAndSave "Bot Channel Name (the account for your bot):" "Nickname:" "Nickname"
+PromptAndSave "Bot Channel Name (the account for your bot):" "Nickname:" "BotName"
 
 # Append default denied users
 $deniedUsers = '"DeniedUsers": ["StreamElements", "Nightbot", "Moobot", "Marbiebot", "LumiaStream"]'
@@ -186,3 +186,41 @@ $content2 | Out-File -FilePath $filePath2 -Force
 # Final cleanup
 # Remove any empty lines
 (Get-Content -Path $filePath2 | Where-Object { $_ -match '\S' }) | Out-File -FilePath $filePath2 -Force
+
+# Download TwitchMarkovChain-2.4, unzip and delete zip
+Invoke-WebRequest -Uri "https://github.com/fosterbarnes/YapFiles/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Downloads\YapFiles.zip"
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\YapFiles.zip", "$env:USERPROFILE\Downloads\YapFiles")
+Remove-Item -Path "$env:USERPROFILE\Downloads\YapFiles.zip"
+
+# Define paths
+$filePath3 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\tempinfo.txt"
+$yapSettings = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-2.4\Settings.py"
+
+# Read contents of tempinfo.txt
+$tempinfoContent = Get-Content -Path $filePath3
+
+# Extract values from tempinfo.txt
+$oauth = $tempinfoContent[0]
+$channel = $tempinfoContent[1]
+$nickname = $tempinfoContent[2]
+$deniedUsers = $tempinfoContent[3]
+$cooldown = $tempinfoContent[4]
+$generateCommands = $tempinfoContent[5]
+
+# Read contents of Settings.py
+$settingsContent = Get-Content -Path $yapSettings
+
+# Modify Settings.py content
+$settingsContent = $settingsContent -replace '(?<="Channel": ")[^"]+', $channel
+$settingsContent = $settingsContent -replace '(?<="Nickname": ")[^"]+', $nickname
+$settingsContent = $settingsContent -replace '(?<=Authentication": "oauth:)[^"]+', $oauth
+$settingsContent = $settingsContent -replace '(?<="DeniedUsers": )\[.*?\]', $deniedUsers
+$settingsContent = $settingsContent -replace '(?<="Cooldown": )[^,]+', $cooldown
+$settingsContent = $settingsContent -replace '(?<="GenerateCommands": )\[.*?\]', $generateCommands
+
+# Write modified content back to Settings.py
+$settingsContent | Set-Content -Path $yapSettings
+
+Write-Host "Settings.py has been updated."
+
