@@ -38,6 +38,8 @@ To uninstall, copy and paste the following to an admin poweshell window, then pr
    
 `iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotUninstaller.ps1")`
 
+When running Yap Bot in the future, open it from the desktop/start menu shortcut before streaming with OBS/Streamlabs. When either OBS or Streamlabs closes, Yap Bot will quit automatically.
+
 ---
 
 ## On Screen Instructions
