@@ -34,7 +34,7 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 
 Follow the on screen instructions to install.
 
-To uninstall, copy and paste the following then press enter
+To uninstall, copy and paste the following to an admin poweshell window, then press enter
    
 `iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotUninstaller.ps1")`
 
