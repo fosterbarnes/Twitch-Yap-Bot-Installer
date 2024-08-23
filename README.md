@@ -38,7 +38,7 @@ To uninstall, copy and paste the following into an admin powershell window, then
    
 `iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotUninstaller.ps1")`
 
-To edit any of your acct, denied users, cooldown etc, copy and paste the following into an admin powershell window, then press enter
+To edit any of your info (accountt, denied users, cooldown etc.), copy and paste the following into an admin powershell window, then press enter
 
 `iex (irm "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapEditor.ps1")`
 
