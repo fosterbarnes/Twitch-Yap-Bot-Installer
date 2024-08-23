@@ -50,6 +50,7 @@ installing py.exe'
 2. Click 'Add python.exe to PATH'
 3. Click 'Install Now' and finish installing
 Press any key to start installing python...
+
 -----------------------------STEP 2------------------------------                                                       
 Installing python dependencies...
 
