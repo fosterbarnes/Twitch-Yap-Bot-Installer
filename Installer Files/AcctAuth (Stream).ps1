@@ -10,9 +10,11 @@ New-Item -Path $filePath -ItemType "file" -Force -ErrorAction SilentlyContinue |
 Write-Host  "1. Login with your bot's Twitch account in your main web browser. Login with a bot account you'd use with something like Mixitup, not your main account.
 2. Press any key to continue on this window to generate an OAuth password 
 3. Copy the password that is generated.
-4. Close the browser window and paste the OAuth password into the next window that pops up.
+4. Close the browser window and paste the OAuth password into the next window that pops up."
 
-Press any key to generate OAuth password..."
+[System.Console]::ForegroundColor = [System.ConsoleColor]::Yellow
+Write-Host "`nPress any key to generate OAuth password..."
+[System.Console]::ForegroundColor = [System.ConsoleColor]::White
 [void][System.Console]::ReadKey($true)
 
 Start-Process -FilePath "https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=q6batx0epp608isickayubi39itsckt&redirect_uri=https://twitchapps.com/tmi/&scope=chat:read+chat:edit+channel:moderate+whispers:read+whispers:edit+channel_editor"
