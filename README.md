@@ -2,7 +2,7 @@
 
 Beginner friendly windows installer for [TwitchMarkovChain](https://github.com/tomaarsen/TwitchMarkovChain)
 
-All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/main/Installer%20Files) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
+All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/main/Installer%20Files) and [here](https://github.com/fosterbarnes/YapFiles) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
 
 Part of the guide shows you how to temporarily disable UAC. PLEASE turn this back on after you're done and don't run any of these files if you feel uncomfortable doing this.
 
