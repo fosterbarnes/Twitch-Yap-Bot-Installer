@@ -227,33 +227,33 @@ Write-Host "Settings.py has been updated."
 $yapSettings2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-2.4\Settings.py"
 
 # Read the content of the file
-$content2 = Get-Content $yapSettings2
+$yapSettingsContent = Get-Content $yapSettings2
 
 # Modify line 36
-$content2[35] = $content2[35] -replace '"Channel": ""Channel": "', '"Channel": "'
+$yapSettingsContent[35] = $yapSettingsContent[35] -replace '"Channel": ""Channel": "', '"Channel": "'
 # Remove the last 2 characters from line 36
-$content2[35] = $content2[35] -replace '..$'
+$yapSettingsContent[35] = $yapSettingsContent[35] -replace '..$'
 
 # Modify line 37
-$content2[36] = $content2[36] -replace '"Nickname": ""Nickname": ', '"Nickname": '
+$yapSettingsContent[36] = $yapSettingsContent[36] -replace '"Nickname": ""Nickname": ', '"Nickname": '
 # Remove the last 2 characters from line 37
-$content2[36] = $content2[36] -replace '..$'
+$yapSettingsContent[36] = $yapSettingsContent[36] -replace '..$'
 
 # Modify line 38
-$content2[37] = $content2[37] -replace '"Authentication": "oauth:oauth:', '"Authentication": "oauth:'
+$yapSettingsContent[37] = $yapSettingsContent[37] -replace '"Authentication": "oauth:oauth:', '"Authentication": "oauth:'
 
 # Replace line 39
-$content2[38] = $content2[38] -replace '"DeniedUsers": "DeniedUsers": ', '"DeniedUsers": '
+$yapSettingsContent[38] = $yapSettingsContent[38] -replace '"DeniedUsers": "DeniedUsers": ', '"DeniedUsers": '
 # Remove the last character from line 39
-$content2[38] = $content2[38] -replace '.$'
+$yapSettingsContent[38] = $yapSettingsContent[38] -replace '.$'
 
 # Replace line 41
-$content2[40] = $content2[40] -replace '"Cooldown": "Cooldown":', '"Cooldown":'
+$yapSettingsContent[40] = $yapSettingsContent[40] -replace '"Cooldown": "Cooldown":', '"Cooldown":'
 # Remove the last character from line 41
-$content2[40] = $content2[40] -replace '.$'
+$yapSettingsContent[40] = $yapSettingsContent[40] -replace '.$'
 
 # Replace line 51
-$content2[50] = $content2[50] -replace '"GenerateCommands": "GenerateCommands":', '"GenerateCommands":'
+$yapSettingsContent[50] = $yapSettingsContent[50] -replace '"GenerateCommands": "GenerateCommands":', '"GenerateCommands":'
 
 # Write the modified content back to the file
-$content2 | Set-Content $yapSettings2
+$yapSettingsContent | Set-Content $yapSettings2
