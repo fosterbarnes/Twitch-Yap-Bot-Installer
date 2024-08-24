@@ -8,7 +8,7 @@ All powershell scripts used are included [here](https://github.com/fosterbarnes/
 
 ## Instructions
 
-1. Search windows for powershell, right click "windows powershell" (NOT powershell ISE) and open as administrator
+1. Search windows for powershell, right click "windows powershell" and open as administrator
 
 ![pwsh2](https://github.com/user-attachments/assets/7a44234a-ffc3-460c-a199-657d3b183a02)
 
