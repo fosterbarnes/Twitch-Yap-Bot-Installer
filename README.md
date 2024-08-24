@@ -2,7 +2,7 @@
 
 Beginner friendly windows installer for [TwitchMarkovChain](https://github.com/tomaarsen/TwitchMarkovChain)
 
-Yap Bot listens to your twitch chat and makes sentences on command
+Yap Bot is a python script for twitch streamers that listens to your twitch chat and makes sentences based on what it's learned.
 
 ![yap example](https://github.com/user-attachments/assets/0e3da20f-a635-4749-a04a-83609ac17a40)
 
