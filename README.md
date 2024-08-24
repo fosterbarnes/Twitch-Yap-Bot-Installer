@@ -50,16 +50,20 @@ If you want to uninstall, copy and paste the following into an admin powershell 
 
 -----------------------------STEP 1------------------------------
 
-Yap Bot is a Python script. If you don't follow the next three steps
-Yap Bot will not work.
+Yap Bot is a Python script. If you don't follow the next three steps 
+and install Python, Yap Bot will not work.
+If you are updating or re-installing, you can skip the Python installation
+by clicking cancel.
 
 1. After starting the Python installer, click 'Use admin priveleges when
 installing py.exe'
 2. Click 'Add python.exe to PATH'
 3. Click 'Install Now' and finish installing
+
 Press any key to start installing python...
 
------------------------------STEP 2------------------------------                                                       
+-----------------------------STEP 2------------------------------
+
 Installing python dependencies...
 
 Press any key to continue...
