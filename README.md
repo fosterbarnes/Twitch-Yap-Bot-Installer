@@ -30,7 +30,7 @@ Part of the guide shows you how to temporarily disable UAC. PLEASE turn this bac
 
 5. In the same powershell window, copy and paste the following then press enter to start installing Yap Bot:
    
-`iex (irm "https://is.gd/YapInstaller")`
+`iex (irm https://is.gd/YapInstaller)`
 
 Follow the on screen instructions to install.
 
@@ -38,11 +38,11 @@ When running Yap Bot in the future, open it from the desktop/start menu shortcut
 
 After installing, if you need to edit any of your info (account, denied users, cooldown etc.), copy and paste the following into an admin powershell window, then press enter
 
-`iex (irm "https://is.gd/YapEditor")`
+`iex (irm https://is.gd/YapEditor)`
 
 If you want to uninstall, copy and paste the following into an admin powershell window, then press enter
    
-`iex (irm "https://is.gd/YapUninstaller")`
+`iex (irm https://is.gd/YapUninstaller)`
 
 ---
 
