@@ -9,10 +9,10 @@ Yap Bot is a python script for twitch streamers that listens to your twitch chat
 Website for more details & video tutorial: [https://sites.google.com/view/twitchyapbot/home](https://sites.google.com/view/twitchyapbot/home)
 
 Scripts (run command with powershell as admin):<br>
-Installer:<br>       `iex (irm https://is.gd/YapInstaller)`<br>
-Updater:<br>         `iex (irm https://is.gd/YapUpdater)`<br>
-Settings Editor:<br> `iex (irm https://is.gd/YapEditor)`<br>
-Uninstaller:<br>     `iex (irm https://is.gd/YapUninstaller)`<br>
+   Installer:<br>       `iex (irm https://is.gd/YapInstaller)`<br>
+   Updater:<br>         `iex (irm https://is.gd/YapUpdater)`<br>
+   Settings Editor:<br> `iex (irm https://is.gd/YapEditor)`<br>
+   Uninstaller:<br>     `iex (irm https://is.gd/YapUninstaller)`<br>
 
 All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/main/Installer%20Files) and [here](https://github.com/fosterbarnes/YapFiles) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
 
