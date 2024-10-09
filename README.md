@@ -26,26 +26,30 @@ All powershell scripts used are included [here](https://github.com/fosterbarnes/
 
 
 
-2. Copy and paste the following into powershell, then press enter: `Set-ExecutionPolicy Unrestricted`  . After pressing enter, press 'A' and press enter again
+2. Copy and paste the following into powershell, then press enter:
+
+   `Set-ExecutionPolicy Unrestricted`<br>
+  
+   After pressing enter, press 'A' and press enter again
 
 ![cmd](https://github.com/user-attachments/assets/d6349e05-a37c-422a-b715-66ffb79a3f54)
 
 
 3. In the same powershell window, copy and paste the following then press enter to start installing Yap Bot:
    
-`iex (irm https://is.gd/YapInstaller)`
+   `iex (irm https://is.gd/YapInstaller)`
 
-Follow the on screen instructions to install.
+   Follow the on screen instructions to install.
 
-When running Yap Bot in the future, open it from the desktop/start menu shortcut before streaming with OBS/Streamlabs. When either OBS or Streamlabs closes, Yap Bot will quit automatically.
+   When running Yap Bot in the future, open it from the desktop/start menu shortcut before streaming with OBS/Streamlabs. When either OBS or Streamlabs closes, Yap Bot will quit automatically.
 
-After installing, if you need to edit any of your info (account, denied users, cooldown etc.), copy and paste the following into an admin powershell window, then press enter
+   After installing, if you need to edit any of your info (account, denied users, cooldown etc.), copy and paste the following into an admin powershell window, then press enter
 
-`iex (irm https://is.gd/YapEditor)`
+   `iex (irm https://is.gd/YapEditor)`
 
-If you want to uninstall, copy and paste the following into an admin powershell window, then press enter
+   If you want to uninstall, copy and paste the following into an admin powershell window, then press enter
    
-`iex (irm https://is.gd/YapUninstaller)`
+   `iex (irm https://is.gd/YapUninstaller)`
 
 ---
 
