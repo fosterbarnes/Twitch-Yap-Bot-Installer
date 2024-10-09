@@ -8,7 +8,7 @@ Yap Bot is a python script for twitch streamers that listens to your twitch chat
 
 Website for more details & video tutorial: [https://sites.google.com/view/twitchyapbot/home](https://sites.google.com/view/twitchyapbot/home)
 
-Scripts (run command with powershell as admin):<br>
+![Scripts](https://sites.google.com/view/twitchyapbot/scripts) (run command with powershell as admin):<br>
    Installer:<br>       `iex (irm https://is.gd/YapInstaller)`<br>
    Updater:<br>         `iex (irm https://is.gd/YapUpdater)`<br>
    Settings Editor:<br> `iex (irm https://is.gd/YapEditor)`<br>
