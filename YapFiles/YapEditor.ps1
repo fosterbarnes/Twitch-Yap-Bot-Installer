@@ -1,7 +1,7 @@
 Import-Module -Name Microsoft.PowerShell.Utility
 
 # Set paths for the original settings file and a temporary copy
-$settingsPath = "$env:USERPROFILE\Documents\Applications\Yap Bot\TwitchMarkovChain-2.4\settings.json"
+$settingsPath = "$env:USERPROFILE\Documents\Applications\Yap Bot\TwitchMarkovChain\settings.json"
 $tempSettingsPath = [System.IO.Path]::GetTempFileName()
 
 # Copy the settings file to a temporary location
