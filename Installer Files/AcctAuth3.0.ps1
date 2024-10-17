@@ -191,15 +191,21 @@ $content2 | Out-File -FilePath $filePath2 -Force
 # Remove any empty lines
 (Get-Content -Path $filePath2 | Where-Object { $_ -match '\S' }) | Out-File -FilePath $filePath2 -Force
 
-# Download TwitchMarkovChain-2.4, unzip and delete zip
+# Download TwitchMarkovChain, Yap Files, unzip and delete zip
 Invoke-WebRequest -Uri "https://github.com/fosterbarnes/YapFiles/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Downloads\YapFiles.zip"
+Invoke-WebRequest -Uri "https://github.com/fosterbarnes/TwitchMarkovChain/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Downloads\TwitchMarkovChain.zip"
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\YapFiles.zip", "$env:USERPROFILE\Downloads\YapFiles")
+[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\TwitchMarkovChain.zip", "$env:USERPROFILE\Downloads\TwitchMarkovChain")
 Remove-Item -Path "$env:USERPROFILE\Downloads\YapFiles.zip"
+Remove-Item -Path "$env:USERPROFILE\Downloads\TwitchMarkovChain.zip"
+Copy-Item -Path "$env:USERPROFILE\Downloads\TwitchMarkovChain\TwitchMarkovChain-main" -Destination "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main" -Recurse
+Rename-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-main" -NewName "TwitchMarkovChain"
+Remove-Item -Path "$env:USERPROFILE\Downloads\TwitchMarkovChain\" -Recurse -Force
 
 # Define paths
 $filePath3 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\tempinfo.txt"
-$yapSettings = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-2.4\Settings.py"
+$yapSettings = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain\Settings.py"
 
 # Read contents of tempinfo.txt
 $tempinfoContent = Get-Content -Path $filePath3
@@ -226,7 +232,7 @@ $settingsContent = $settingsContent -replace '(?<="GenerateCommands": )\[.*?\]',
 # Write modified content back to Settings.py
 $settingsContent | Set-Content -Path $yapSettings
 
-$yapSettings2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-2.4\Settings.py"
+$yapSettings2 = Join-Path -Path $env:USERPROFILE -ChildPath "Downloads\YapFiles\YapFiles-main\TwitchMarkovChain\Settings.py"
 
 # Read the content of the file
 $yapSettingsContent = Get-Content $yapSettings2
