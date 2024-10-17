@@ -20,23 +20,47 @@ Remove-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer" -Recurse
 Write-Host "Updating Yap Bot..."
 
 #Copy and replace YapBotInstaller, YapBotUninstaller, YapBotUpdater & YapEditor
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\Twitch Yap Bot.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\yap icon.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\yap icon purple.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\yap icon blue.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YYapBotUninstaller.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapEditor.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapBotUpdater.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+$filesToCopy = @(
+    "Twitch Yap Bot.ps1",
+    "yap icon.ico",
+    "yap icon purple.ico",
+    "yap icon blue.ico",
+    "YapBotUninstaller.ps1",
+    "YapEditor.ps1",
+    "YapBotUpdater.ps1"
+)
 
-Write-Host "`n-----------------------------------------------------------------"
-Write-Host "Twitch Yap Bot.ps1 saved to $env:USERPROFILE\Documents\Applications\Yap Bot\Twitch Yap Bot.ps1"
-Write-Host "yap icon.ico saved to $env:USERPROFILE\Documents\Applications\Yap Bot\yap icon.ico"
-Write-Host "yap icon purple.ico saved to $env:USERPROFILE\Documents\Applications\Yap Bot\yap icon purple.ico"
-Write-Host "yap icon blue.ico saved to $env:USERPROFILE\Documents\Applications\Yap Bot\yap icon blue.ico"
-Write-Host "YapBotUninstaller.ps1 saved to $env:USERPROFILE\Documents\Applications\Yap Bot\YapBotUninstaller.ps1"
-Write-Host "YapEditor.ps1 saved to $env:USERPROFILE\Documents\Applications\Yap Bot\YapEditor.ps1"
-Write-Host "YapUpdater.ps1 saved to $env:USERPROFILE\Documents\Applications\Yap Bot\YapBotUpdater.ps1"
-Write-Host "-----------------------------------------------------------------"
+foreach ($file in $filesToCopy) {
+    $sourcePath = "$env:USERPROFILE\Downloads\YapFiles\$file"
+    $destinationPath = "$env:USERPROFILE\Documents\Applications\Yap Bot\$file"
+    
+    Copy-Item -Path $sourcePath -Destination $destinationPath -Recurse -Force
+    
+    # Verify if the file was copied successfully
+    if (Test-Path -Path $destinationPath) {
+        Write-Host "$file saved to $destinationPath"
+    } else {
+        Write-Host "Error: $file could not be copied to $destinationPath"
+    }
+}
+
+$filesToCopy2 = @(
+    "MarkovChainBot.py"
+)
+
+foreach ($file2 in $filesToCopy2) {
+    $sourcePath = "$env:USERPROFILE\Downloads\YapFiles\TwitchMarkovChain\$file2"
+    $destinationPath = "$env:USERPROFILE\Documents\Applications\Yap Bot\TwitchMarkovChain\$file2"
+    
+    Copy-Item -Path $sourcePath -Destination $destinationPath -Recurse -Force
+    
+    # Verify if the file was copied successfully
+    if (Test-Path -Path $destinationPath) {
+        Write-Host "$file2 saved to $destinationPath"
+    } else {
+        Write-Host "Error: $file2 could not be copied to $destinationPath"
+    }
+}
 
 #Cleanup
 Remove-Item -Path "$env:USERPROFILE\Downloads\YapFiles" -Recurse -Force
