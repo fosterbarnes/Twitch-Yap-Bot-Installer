@@ -7,27 +7,26 @@ $Host.UI.RawUI.WindowTitle = "Yap Bot Updater"
 #[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\YapFiles.zip", "$env:USERPROFILE\Downloads\YapFiles")
 #Remove-Item -Path "$env:USERPROFILE\Downloads\YapFiles.zip"
 # Download TwitchMarkovChain, Yap Files, unzip and delete zip
-Invoke-WebRequest -Uri "https://github.com/fosterbarnes/YapFiles/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Downloads\YapFiles.zip"
-Invoke-WebRequest -Uri "https://github.com/fosterbarnes/TwitchMarkovChain/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Downloads\TwitchMarkovChain.zip"
+Invoke-WebRequest -Uri "https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer.zip"
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\YapFiles.zip", "$env:USERPROFILE\Downloads\YapFiles")
-[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\TwitchMarkovChain.zip", "$env:USERPROFILE\Downloads\TwitchMarkovChain")
-Remove-Item -Path "$env:USERPROFILE\Downloads\YapFiles.zip"
-Remove-Item -Path "$env:USERPROFILE\Downloads\TwitchMarkovChain.zip"
-Copy-Item -Path "$env:USERPROFILE\Downloads\TwitchMarkovChain\TwitchMarkovChain-main" -Destination "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main" -Recurse
-Rename-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\TwitchMarkovChain-main" -NewName "TwitchMarkovChain"
-Remove-Item -Path "$env:USERPROFILE\Downloads\TwitchMarkovChain\" -Recurse -Force
+[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer.zip", "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer-1")
+Remove-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer.zip"
+Copy-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer-1\Twitch-Yap-Bot-Installer-main" -Destination "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer" -Recurse
+Remove-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer-1\" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer\YapFiles" -Destination "$env:USERPROFILE\Downloads\YapFiles" -Recurse
+Copy-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer\TwitchMarkovChain" -Destination "$env:USERPROFILE\Downloads\YapFiles\TwitchMarkovChain" -Recurse
+Remove-Item -Path "$env:USERPROFILE\Downloads\Twitch-Yap-Bot-Installer" -Recurse -Force
 
 Write-Host "Updating Yap Bot..."
 
 #Copy and replace YapBotInstaller, YapBotUninstaller, YapBotUpdater & YapEditor
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\Twitch Yap Bot.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\yap icon.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\yap icon purple.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\yap icon blue.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\YapBotUninstaller.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\YapEditor.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
-Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapFiles-main\YapBotUpdater.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\Twitch Yap Bot.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\yap icon.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\yap icon purple.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\yap icon blue.ico" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YYapBotUninstaller.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapEditor.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\Downloads\YapFiles\YapBotUpdater.ps1" -Destination "$env:USERPROFILE\Documents\Applications\Yap Bot" -Recurse -Force
 
 Write-Host "`n-----------------------------------------------------------------"
 Write-Host "Twitch Yap Bot.ps1 saved to $env:USERPROFILE\Documents\Applications\Yap Bot\Twitch Yap Bot.ps1"
