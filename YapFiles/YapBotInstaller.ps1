@@ -19,7 +19,7 @@ for ($i = 0; $i -lt $height; $i++) {
 # Define variables
 $pythonUrl = "https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe"
 $installerPath = "$env:USERPROFILE\Downloads\python-3.12.1-amd64.exe"
-$acctAuthUrl = "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/main/Installer%20Files/AcctAuth3.0.ps1"
+$acctAuthUrl = "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/refs/heads/main/YapFiles/AcctAuth3.0.ps1"
 $pipPath = "C:\Users\$env:USERNAME\AppData\Local\Programs\Python\Python312\Scripts\pip.exe"
 $requirementsUrl = "https://raw.githubusercontent.com/fosterbarnes/TwitchMarkovChain/refs/heads/main/requirements.txt"
 $tempFile = [System.IO.Path]::GetTempFileName()
