@@ -38,13 +38,13 @@ class Settings:
         "Authentication": "oauth:<auth>",
         "DeniedUsers": ["StreamElements", "Nightbot", "Moobot", "Marbiebot"],
         "AllowedUsers": [],
-        "Cooldown": 20,
+        "Cooldown": 0,
         "KeyLength": 2,
-        "MaxSentenceWordAmount": 25,
+        "MaxSentenceWordAmount": 40,
         "MinSentenceWordAmount": -1,
-        "HelpMessageTimer": 60 * 60 * 5, # 18000 seconds, 5 hours
+        "HelpMessageTimer": 600000, # 18000 seconds, 5 hours
         "AutomaticGenerationTimer": -1,
-        "WhisperCooldown": True,
+        "WhisperCooldown": false,
         "EnableGenerateCommand": True,
         "SentenceSeparator": " - ",
         "AllowGenerateParams": True,
