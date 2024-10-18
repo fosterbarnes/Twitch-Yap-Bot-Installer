@@ -21,6 +21,7 @@ Write-Host "Updating Yap Bot..."
 
 #Copy and replace YapBotInstaller, YapBotUninstaller, YapBotUpdater & YapEditor
 $filesToCopy = @(
+    "AcctAuth3.0.ps1",
     "Twitch Yap Bot.ps1",
     "yap icon.ico",
     "yap icon purple.ico",

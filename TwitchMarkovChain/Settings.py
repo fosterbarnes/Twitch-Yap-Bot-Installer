@@ -40,7 +40,7 @@ class Settings:
         "AllowedUsers": [],
         "Cooldown": 20,
         "KeyLength": 2,
-        "MaxSentenceWordAmount": 25,
+        "MaxSentenceWordAmount": 40,
         "MinSentenceWordAmount": -1,
         "HelpMessageTimer": 60 * 60 * 5, # 18000 seconds, 5 hours
         "AutomaticGenerationTimer": -1,

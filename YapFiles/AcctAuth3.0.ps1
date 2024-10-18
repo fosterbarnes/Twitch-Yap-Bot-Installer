@@ -225,9 +225,15 @@ $tempinfoContent = Get-Content -Path $filePath3
 # Extract values from tempinfo.txt
 $oauth = $tempinfoContent[0]
 $channel = $tempinfoContent[1]
+$channel = $channel.Insert(12, '#')
 $nickname = $tempinfoContent[2]
 $deniedUsers = $tempinfoContent[3]
 $cooldown = $tempinfoContent[4]
+# Split the string into two parts: first 11 characters and the rest
+$prefix = $cooldown.Substring(0, 11)
+$suffix = $cooldown.Substring(11) -replace '"', ''
+# Combine both parts and update $cooldown
+$cooldown = $prefix + $suffix
 $generateCommands = $tempinfoContent[5]
 
 # Read contents of Settings.py

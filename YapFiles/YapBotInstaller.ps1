@@ -157,6 +157,14 @@ $UpdaterShortcut.WorkingDirectory = [System.IO.Path]::GetDirectoryName($UpdaterS
 $UpdaterShortcut.IconLocation = "$env:USERPROFILE\Documents\Applications\Yap Bot\yap icon blue.ico"
 $UpdaterShortcut.Save()
 
+# Change some default settings
+$settingsFilePath = "$env:USERPROFILE\Documents\Applications\Yap Bot\TwitchMarkovChain\Settings.py"
+$settingsContent = Get-Content $settingsFilePath
+$settingsContent = $settingsContent -replace '"MaxSentenceWordAmount":\s*\d+,', '"MaxSentenceWordAmount": 40,'
+$settingsContent = $settingsContent -replace '"HelpMessageTimer":\s*60\s*\*\s*60\s*\*\s*5,.*', '"HelpMessageTimer": 60 * 60 * 60,'
+$settingsContent = $settingsContent -replace '"WhisperCooldown":\s*True,', '"WhisperCooldown": False,'
+$settingsContent | Set-Content $settingsFilePath
+
 # Have the user make the shortcut run as admin
 [System.Console]::ForegroundColor = [System.ConsoleColor]::DarkGray
 Write-Host ("`n-----------------------------STEP 4------------------------------`n")
