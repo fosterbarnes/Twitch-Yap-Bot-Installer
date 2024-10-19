@@ -58,7 +58,7 @@ if (-Not (Test-Path -Path $installerPath)) {
 }
 
 # Uninstalls previous yap bot versions
-Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fosterbarnes/YapFiles/main/YapBotUninstaller.ps1" | Select-Object -ExpandProperty Content)
+Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/refs/heads/main/YapFiles/YapBotUninstaller.ps1" | Select-Object -ExpandProperty Content)
 
 
 [System.Console]::ForegroundColor = [System.ConsoleColor]::DarkGray
