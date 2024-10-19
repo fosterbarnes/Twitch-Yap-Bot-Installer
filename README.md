@@ -14,7 +14,7 @@ Website for more details & video tutorial: [https://sites.google.com/view/twitch
    Settings Editor:<br> `iex (irm https://is.gd/YapBotEditor)`<br>
    Uninstaller:<br>     `iex (irm https://is.gd/YapBotUninstaller)`<br>
 
-All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/main/Installer%20Files) and [here](https://github.com/fosterbarnes/YapFiles) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
+All powershell scripts used are included [here](https://github.com/fosterbarnes/Twitch-Yap-Bot-Installer/tree/testing/YapFiles) in case you want to look through them and see exactly what they do. This was created and tested on Windows 10, Windows 11 should work too but it has not been tested.
 
 ---
 
