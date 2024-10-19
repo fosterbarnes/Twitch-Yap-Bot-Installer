@@ -1,5 +1,5 @@
 # Set the title of the PowerShell window
-$Host.UI.RawUI.WindowTitle = "Yap Bot Installer v3.0"
+$Host.UI.RawUI.WindowTitle = "Yap Bot Installer v4.0"
 # Define a function to convert bytes to megabytes
 function Convert-BytesToMB {
     param (
