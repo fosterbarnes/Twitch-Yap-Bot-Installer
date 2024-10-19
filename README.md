@@ -37,7 +37,7 @@ All powershell scripts used are included [here](https://github.com/fosterbarnes/
 
 3. In the same powershell window, copy and paste the following then press enter to start installing Yap Bot:
    
-   `iex (irm https://is.gd/YapInstaller)`
+   `iex (irm https://is.gd/YapBotInstaller)`
 
    Follow the on screen instructions to install.
 
@@ -45,11 +45,11 @@ All powershell scripts used are included [here](https://github.com/fosterbarnes/
 
    After installing, if you need to edit any of your info (account, denied users, cooldown etc.), copy and paste the following into an admin powershell window, then press enter
 
-   `iex (irm https://is.gd/YapEditor)`
+   `iex (irm https://is.gd/YapBotEditor)`
 
    If you want to uninstall, copy and paste the following into an admin powershell window, then press enter
    
-   `iex (irm https://is.gd/YapUninstaller)`
+   `iex (irm https://is.gd/YapBotUninstaller)`
 
 ---
 
