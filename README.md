@@ -112,7 +112,8 @@ Press any key to continue...
 
 All done! Launch Yap Bot from the Desktop ot Start Menu, then use
 '!yap' (or any other command you defined earlier) in your chat to test it out.
-Have fun homie. Continuing with the installer will launch Yap
+Have fun homie. Continuing with the installer will launch Yap Bot.
+
 This is what Yap Bot looks like when it's running properly:
 
 ![7](https://github.com/user-attachments/assets/81ec5c82-1ef5-47e9-9ea9-c5ce73771e98)
