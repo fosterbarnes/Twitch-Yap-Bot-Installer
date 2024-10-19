@@ -95,7 +95,6 @@ Write-Host "Installing python dependencies...`n"
 # Download the requirements.txt file
 Invoke-WebRequest -Uri $requirementsUrl -OutFile $tempFile
 
-
 # Install the Python packages
 & $pipPath install -r $tempFile
 & "C:\Users\$env:USERNAME\AppData\Local\Programs\Python\Python312\Scripts\pip.exe" install nltk
