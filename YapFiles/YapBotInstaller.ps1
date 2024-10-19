@@ -17,12 +17,14 @@ for ($i = 0; $i -lt $height; $i++) {
 }
 
 # Define variables
-$pythonUrl = "https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe"
 $installerPath = "$env:USERPROFILE\Downloads\python-3.12.1-amd64.exe"
+$pythonUrl = "https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe"
 $acctAuthUrl = "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/refs/heads/main/YapFiles/AcctAuth3.0.ps1"
-$pipPath = "C:\Users\$env:USERNAME\AppData\Local\Programs\Python\Python312\Scripts\pip.exe"
 $requirementsUrl = "https://raw.githubusercontent.com/fosterbarnes/TwitchMarkovChain/refs/heads/main/requirements.txt"
+$yapUninstallerUrl = "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/refs/heads/main/YapFiles/YapBotUninstaller.ps1"
+$pipPath = "C:\Users\$env:USERNAME\AppData\Local\Programs\Python\Python312\Scripts\pip.exe"
 $tempFile = [System.IO.Path]::GetTempFileName()
+
 
 # Display an image
 # $scriptContent = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/DevAndersen/posh-bucket/master/projects/consoleImageRenderer/consoleImageRenderer.ps1" -UseBasicParsing | Select-Object -ExpandProperty Content
@@ -58,7 +60,7 @@ if (-Not (Test-Path -Path $installerPath)) {
 }
 
 # Uninstalls previous yap bot versions
-Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fosterbarnes/Twitch-Yap-Bot-Installer/refs/heads/main/YapFiles/YapBotUninstaller.ps1" | Select-Object -ExpandProperty Content)
+Invoke-Expression (Invoke-WebRequest -Uri $yapUninstallerUrl | Select-Object -ExpandProperty Content)
 
 
 [System.Console]::ForegroundColor = [System.ConsoleColor]::DarkGray
